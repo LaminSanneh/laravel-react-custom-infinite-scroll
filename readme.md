@@ -13,3 +13,5 @@ composer install
 ```
 
 Finally run laravel as you normally do. Either ```php artisan serve``` or use a dedicated server to host the application.
+
+![](main-image.gif)

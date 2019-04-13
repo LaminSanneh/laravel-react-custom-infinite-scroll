@@ -43,6 +43,9 @@ body, html {
   }
   .loading-indicator {
     visibility: hidden;
+    background-color: #d1b3ff;
+    padding: 10px;
+    color: #FFFFFF;
   }
 
   &.is-fetching .loading-indicator {
