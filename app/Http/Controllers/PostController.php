@@ -18,6 +18,6 @@ class PostController extends Controller
 
     public function index()
     {
-        return $this->postService->getAll(Input::get('limit'));
+        return $this->postService->getAll(Input::get('limit'), Input::get('pageNumber'));
     }
 }

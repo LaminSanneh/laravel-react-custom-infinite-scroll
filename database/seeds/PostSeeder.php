@@ -12,8 +12,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        if (Post::count() === 0) {
-            factory(Post::class, 80)->create();
-        }
+        Post::truncate();
+        factory(Post::class, 80)->create();
     }
 }

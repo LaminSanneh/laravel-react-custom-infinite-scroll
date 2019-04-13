@@ -1,10 +1,11 @@
 import axios from "axios";
 
 export default {
-    getAll (limit = 10) {
+    getAll (limit, pageNumber) {
       return axios.get("/api/posts", {
         params: {
-          limit: 15
+          limit: limit,
+          pageNumber: pageNumber
         }
       }).then((res) => { return res.data });
     }

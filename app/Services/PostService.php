@@ -10,8 +10,11 @@ class PostService {
      * @param integer $limit
      * @return Post[]
      */
-    public function getAll ($limit = 10)
+    public function getAll ($limit, $pageNumber)
     {
-        return Post::limit($limit)->get();
+        return Post
+            ::offset(($pageNumber - 1) * $limit)
+            ->limit($limit)
+            ->get();
     }
 }
